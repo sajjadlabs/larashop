@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LaraShop</title>
+    <title>{{ $title ?? 'LaraShop' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-dana text-right">
-    <div>
-        <x-navigation/>
+<body class="min-h-screen text-left cursor-default">
+    <livewire:header/>
 
-        <main class="max-w-screen-xl mx-auto px-4">
-            {{ $slot }}
-        </main>
-    </div>
+    <main class="max-w-screen-xl mx-auto px-4">
+        {{ $slot }}
+    </main>
 </body>
 </html>
