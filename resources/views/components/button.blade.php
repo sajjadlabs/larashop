@@ -1,24 +1,41 @@
-@props(['icon', 'callToAction'])
+@props(['src', 'callToAction', 'value', 'size' => 'base', 'rounded' => false])
 
 @php
-$class = 'cursor-pointer';
+    $class = 'cursor-pointer';
 
-if ($icon ?? false) {
-    $class .= ' flex cursor-pointer items-center gap-x-2';
-}
+    $class .= match ($size) {
+        'small' => ' p-2 text-sm',
+        'base' => ' px-3 py-2',
+    };
 
-if ($callToAction ?? false) {
-    $class .= ' bg-blue-500 hover:bg-blue-600 transition-colors duration-300 px-3 py-2 text-white rounded-md shadow xs focus:outline-blue-600';
-}
+    if ($rounded) {
+        $class .= ' rounded-4xl';
+    } else {
+        $class .= ' rounded-md';
+    }
+
+    if ($src ?? false) {
+        $class .= ' flex cursor-pointer items-center';
+    }
+
+    if ($value ?? false) {
+        $class .= ' gap-x-2';
+    }
+
+    if ($callToAction ?? false) {
+        $class .= ' bg-blue-500 hover:bg-blue-600 transition-colors duration-300 text-white shadow xs focus:outline-blue-600';
+    }
 
 @endphp
 
 <button {{ $attributes(['class' => $class]) }}>
-    @if($icon ?? false)
+    @if($src ?? false)
         <div>
-            <img src="{{ $icon }}" alt="button icon">
+            <img src="{{ $src }}" alt="button icon">
         </div>
     @endif
 
-    <span>{{ $slot }}</span>
+    @if($value ?? false)
+        <span>{{ $value }}</span>
+    @endif
 </button>

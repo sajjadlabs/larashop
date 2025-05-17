@@ -5,4 +5,5 @@ return [
     'submit' => 'ورود',
     'header' => 'سلام',
     'prompt-phone-number' => 'لطفا شماره موبایل خود را وارد کنید',
+    'placeholder' => '09123456789',
 ];

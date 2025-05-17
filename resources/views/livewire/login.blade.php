@@ -36,12 +36,12 @@
 
                 <input
                     type="number"
-                    placeholder="09123456789"
+                    placeholder="{{ __('login.placeholder') }}"
                     class="w-full rounded-md border border-gray-300 bg-gray-100 px-3 py-2 focus:outline-gray-300"
                     dir="ltr"
                 />
 
-                <x-button class="w-full" call-to-action>{{ __('login.submit') }}</x-button>
+                <x-button class="w-full" call-to-action :value="__('login.submit')"/>
             </form>
         </div>
     </div>

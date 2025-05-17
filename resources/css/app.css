@@ -20,6 +20,13 @@
 }
 
 @font-face {
+    font-family: 'Dana';
+    src: url("../fonts/DanaFaNum-Medium.woff2") format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Hanken Grotesk";
     src: url("../fonts/HankenGrotesk-Regular.ttf") format('ttf');
     font-weight: 400;
