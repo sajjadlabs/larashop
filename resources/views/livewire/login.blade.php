@@ -8,9 +8,9 @@
         class="fixed inset-0 z-40 bg-black/50"
     ></div>
 
-    <div class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+    <div class="fixed inset-0 z-50 flex items-end md:items-center justify-center pointer-events-none">
         <div
-            class="bg-white space-y-4 max-w-md w-full text-start rounded-xl shadow-lg p-6 text-center pointer-events-auto"
+            class="bg-white space-y-4 md:max-w-md w-full text-start rounded-xl shadow-lg p-6 text-center pointer-events-auto"
             x-transition:enter="transition ease-out duration-300"
             x-transition:enter-start="translate-y-[200%] opacity-0"
             x-transition:enter-end="translate-y-0 opacity-100"
